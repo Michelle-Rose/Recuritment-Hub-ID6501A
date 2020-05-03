@@ -1,0 +1,1219 @@
+/* Global */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background-color: f4f4f4;
+}
+
+h1,
+h2,
+h3 {
+    color: #22c1c3;
+    font-size: 18pt;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.submitBtn {
+    height: 35px;
+    background-color: #fdbb2d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 5px;
+    color: #edf0f1;
+}
+
+.submitBtn:hover {
+    background-color: #22c1c3;
+
+}
+
+.grey {
+    padding: 15px;
+    background-color: #edf0f1;
+    color: white;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.aqua {
+    padding: 15px;
+    background-color: #22c1c3;
+    color: #edf0f1;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.yellow {
+    padding: 15px;
+    background-color: #fdbb2d;
+    color: darkslategrey;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.white {
+    padding: 15px;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 70px 0 rgba(110, 130, 208, .18);
+}
+
+.pageTitle {
+    text-align: center;
+    color: #22c1c3;
+    font-size: 20pt;
+}
+
+.pageTitle::before {
+    content: '';
+    background-image: linear-gradient(to right, #22c1c3, #fdbb2d);
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    z-index: -10;
+    margin-top: -15px;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 90px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+.col1 {
+    width: 8.33%;
+    float: left;
+}
+
+.col2 {
+    width: 16.66%;
+    float: left;
+
+}
+
+.col3 {
+    width: 25%;
+    float: left;
+
+}
+
+.col4 {
+    width: 33.33%;
+    float: left;
+
+}
+
+.col5 {
+    width: 41.66%;
+    float: left;
+
+}
+
+.col6 {
+    width: 50%;
+    float: left;
+
+}
+
+.col7 {
+    width: 58.33%;
+    float: left;
+
+}
+
+.col8 {
+    width: 66.66%;
+    float: left;
+
+}
+
+.col9 {
+    width: 75%;
+    float: left;
+
+}
+
+.col10 {
+    width: 83.33%;
+    float: left;
+
+}
+
+.col11 {
+    width: 91.66%;
+    float: left;
+
+}
+
+.col12 {
+    width: 100%;
+    float: left;
+
+}
+
+/* header */
+header {
+    background: #22c1c3;
+    color: #edf0f1;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    min-height: 70px;
+    border-bottom: #fdbb2d 3px solid;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header a {
+    color: #edf0f1;
+    text-decoration: none;
+    font-size: 16pt;
+    font-weight: 500;
+}
+
+header #logo {
+    float: left;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header #logo a {
+    font-size: 30pt;
+    color: white;
+}
+
+header nav {
+    float: right;
+    margin-top: 20px;
+}
+
+header .highlight,
+header .current a {
+    color: #fdbb2d;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #0088a9;
+    font-weight: bold;
+}
+
+/* footer */
+footer {
+    padding: 20px;
+    margin-top: 0px;
+    background-color: #22c1c3;
+    color: #edf0f1;
+    text-align: center;
+}
+
+/* Homepage */
+/* Banner */
+#banner {
+    min-height: 500px;
+    background: url('../img/banner.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h1 {
+    text-align: center;
+    color: white;
+    font-size: 55px;
+    letter-spacing: 6px;
+    text-shadow: 0 0 100px black;
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+#banner p {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    text-shadow: 0 0 100px black;
+}
+
+/* Newsletter */
+#newsletter {
+    padding: 15px;
+    background: #22c1c3;
+    color: #edf0f1;
+}
+
+#newsletter h1 {
+    float: left;
+    color: #edf0f1;
+}
+
+#newsletter form {
+    float: right;
+    margin-top: 25px;
+}
+
+#newsletter input[type="email"] {
+
+    width: 500px;
+    padding: 10px 20px;
+
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+/* topRecruiters */
+#topRecruiters {
+    margin: 10px;
+}
+
+#topRecruiters h1 {
+    text-align: center;
+    color: #22c1c3;
+    font-size: 30pt;
+}
+
+#topRecruiters h1::before {
+    content: '';
+    background-image: linear-gradient(to right, #22c1c3, #fdbb2d);
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    z-index: -10;
+    margin-top: -15px;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 90px;
+}
+
+#topRecuriters .recuriter {
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+/* About */
+/* aboutMain */
+#aboutContent {
+    padding: 20px;
+}
+
+#aboutTitle {
+    text-align: left;
+    color: #22c1c3;
+    font-size: 20pt;
+}
+
+#aboutTitle::before {
+    content: '';
+    background-image: linear-gradient(to right, #22c1c3, #fdbb2d);
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    z-index: -10;
+    margin-top: -15px;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 90px;
+}
+
+article #aboutMain {
+    float: left;
+    width: 65%;
+}
+
+/* aboutSide */
+aside #aboutSide {
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+}
+
+#aboutSide h3 {
+    color: #edf0f1;
+}
+
+/* our recuriters */
+#allRecruiters {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#allRecruiters img {
+    max-width: 100px;
+    margin: 10px 30px;
+}
+
+/* sign up */
+#signUp {
+    padding: 20px 0;
+}
+
+#signUp form {
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+#signUp .signupBtn {
+    /* height: 70px; */
+    background-color: #fdbb2d;
+    border: 0;
+    padding: 20px;
+    color: #edf0f1;
+    font-size: 12pt;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+
+/* employer */
+#page {
+    margin: 0;
+    padding: 0;
+    background-color: #edf0f1;
+}
+
+/*Page heading*/
+.pagehead h1 {
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 35pt;
+    color: #22c1c3;
+    border-bottom: #fdbb2d 1px solid;
+}
+
+/* login overlay */
+/* profile */
+#profileSide {
+    float: left;
+    width: 25%;
+    margin-top: 10px;
+}
+
+#profileSide img {
+    margin: 10%;
+}
+
+.title {
+    color: #22c1c3;
+    font-size: 20pt;
+}
+
+
+#profile ul li,
+#editProfile ul li {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.empProfile {
+    width: 100%;
+    font-size: 12pt;
+
+}
+
+.empProfileBtn {
+    float: right;
+    height: 35px;
+    width: 150px;
+    background-color: #fdbb2d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 5px;
+    color: #edf0f1;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.empProfileBtn:hover {
+    background-color: #22c1c3;
+}
+
+#cancel {
+    float: right;
+    height: 35px;
+    width: 150px;
+    background-color: #22c1c3;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    color: #edf0f1;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+#cancel:hover {
+    background-color: #fdbb2d;
+}
+
+/* listing */
+.listing {
+    box-shadow: 0 2px 70px 0 rgba(110, 130, 208, .18);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.detials {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.editDetials {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.detials .fas.icon,
+.detials #icon,
+.editDetials .fas.icon,
+.editDetials #icon {
+    margin-top: 5px;
+    margin-right: 10px;
+    color: #22c1c3;
+}
+
+.detials a {
+    text-decoration: none;
+    float: right;
+}
+
+.detials a:hover {
+    color: grey;
+}
+
+.applybtn {
+    height: 40px;
+    padding: 7px;
+    background-image: linear-gradient(to right, #22c1c3, #fdbb2d);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+
+}
+
+.applyBtn {
+    padding: 5px 30px;
+    float: right;
+    margin-top: 3px;
+    margin-left: 2px;
+    border-radius: 0;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.applyBtn:hover {
+    background: #22c1c3;
+}
+
+.upload {
+    height: 30px;
+    width: 80px;
+    background-color: #fdbb2d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 25%;
+    color: #edf0f1;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.upload:hover {
+    background-color: #22c1c3;
+}
+
+.delete {
+    height: 30px;
+    width: 80px;
+    background-color: #22c1c3;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 5%;
+    margin-bottom: 5px;
+    color: #edf0f1;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.delete:hover {
+    background-color: #fdbb2d;
+}
+
+
+/*Text boxes*/
+input[type=text] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.descript {
+    width: 100%;
+    height: 250px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    overflow: auto;
+}
+
+#descript,
+.description,
+#comment {
+    width: 90%;
+    height: 250px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    overflow: auto;
+}
+
+
+.profileDescript {
+    background-color: #edf0f1;
+    width: 90%;
+    height: 250px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    overflow: auto;
+}
+
+.jobDescript {
+    background-color: #edf0f1;
+    width: 100%;
+    height: 250px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    overflow: auto;
+}
+
+#postcode {
+    width: 18%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#city,
+#suburb {
+    width: 36%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#title {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#class {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#exper,
+#salary,
+#date {
+    width: 250px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/*Job Page*/
+/*Job Search*/
+.jobsSearch {
+    text-align: center;
+    margin: 50px 6%;
+    padding: 30px 0;
+    background-image: linear-gradient(to right, #22c1c3, #fdbb2d);
+}
+
+.jobsSearch .searchForm {
+    width: 250px;
+    display: inline-flex;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    font-size: 14pt;
+    background: white;
+    padding: 5px 20px;
+}
+
+.jobsSearch select {
+    width: 250px;
+    padding: 5px 20px;
+    font-size: 14pt;
+    background: white;
+}
+
+.jobsSearch .searchBtn {
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    font-size: 14pt;
+    background: white;
+    padding: 5px 20px;
+    background-color: #22c1c3;
+    color: white;
+}
+
+/*End of Job Search*/
+/*Page Links*/
+.pageLinks {
+    text-align: center;
+}
+
+.pageLinks li {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+
+.pageLinks li:hover {
+    padding: 5px;
+    color: white;
+    background-image: linear-gradient(to right, #22c1c3, #fdbb2d);
+}
+
+.previous {
+    color: #22c1c3;
+}
+
+.next {
+    color: #fdbb2d;
+}
+
+/*End of Page Links*/
+/* feadback */
+.fbsubmitBtn {
+    height: 35px;
+    background-color: #fdbb2d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 80%;
+    margin-bottom: 5px;
+    color: #edf0f1;
+}
+
+.fbsubmitBtn:hover {
+    background-color: #22c1c3;
+
+}
+
+/* account */
+.account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: -20px 0 50px;
+}
+
+.account h1 {
+    font-weight: bold;
+    margin: 0;
+    color: #22c1c3;
+}
+
+.overlay h1 {
+    color: #edf0f1;
+}
+
+.account a {
+    color: #fdbb2d;
+    font-size: 14pt;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.account .container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 70px 0 rgba(110, 130, 208, .18);
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    height: 800px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.formContainer form {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.social {
+    margin: 20px 0;
+}
+
+.social a {
+    border: 1px solid #fdbb2d;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 50px;
+    width: 50px;
+}
+
+.formContainer input {
+    background-color: #edf0f1;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+#name {
+    background-color: #edf0f1;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 49%;
+}
+
+.account button,
+.account #signUpBTN {
+    border: 1px solid #fdbb2d;
+    background: #fdbb2d;
+    color: #edf0f1;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 80ms ease-in;
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+}
+
+.account button:active,
+.account #signUpBTN:active {
+    transform: scale(0.95);
+}
+
+.account button:focus,
+.account #signUpBTN:focus {
+    outline: none;
+}
+
+.account button.hidden,
+.account #signUpBTN.hidden {
+    background: transparent;
+    border-color: white;
+}
+
+/* alginment */
+.account form {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+.formContainer {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.8s ease-in-out;
+}
+
+.signinContainer {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container.right-panel-active .signinContainer {
+    transform: translateX(100%);
+}
+
+.signupcontainer {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.right-panel-active .signupcontainer {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+
+@keyframes show {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.overlayContainer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.container.right-panel-active .overlayContainer {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    background: #fdbb2d;
+    background: linear-gradient(to right, #fdbb2d, #22c1c3) no-repeat 0 0 / cover;
+    color: #edf0f1;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlayLeft {
+    transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlayLeft {
+    transform: translateX(0);
+}
+
+.overlayRight {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.right-panel-active .overlayRight {
+    transform: translateX(20%);
+}
+
+/* validation */
+/* account validation */
+.formInput {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.formInput input {
+    background-color: #edf0f1;
+    border: none;
+    font-size: 14px;
+    padding: 10px;
+    width: 400px;
+    max-width: 100%;
+}
+
+.formInput.vaild input {
+    border: 2px solid #22c1c3;
+}
+
+.formInput.invaild input {
+    border: 2px solid #c8392c;
+}
+
+.formInput i {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.formInput.vaild i.fa-check-circle {
+    color: #22c1c3;
+    visibility: visible;
+}
+
+.formInput.invaild i.fa-exclamation-circle {
+    color: #c8392c;
+    visibility: visible;
+}
+
+.formInput small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #c8392c;
+    visibility: hidden;
+}
+
+.formInput.invaild small {
+    visibility: visible;
+}
+
+/* profile validation */
+.profileInput {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.profileInput input {
+    background-color: #edf0f1;
+    border: none;
+    font-size: 14px;
+    padding: 10px;
+    width: 90%;
+}
+
+.profileInput i {
+    position: absolute;
+    top: 20px;
+    left: 88%;
+    visibility: hidden;
+}
+
+.profileInput i.code {
+    position: absolute;
+    top: 20px;
+    left: 16%;
+    visibility: hidden;
+}
+
+.profileInput i.place {
+    position: absolute;
+    top: 20px;
+    left: 34%;
+    visibility: hidden;
+}
+
+.profileInput.vaild i.fa-check-circle {
+    color: #22c1c3;
+    visibility: visible;
+}
+
+.profileInput.invaild i.fa-exclamation-circle {
+    color: #c8392c;
+    visibility: visible;
+}
+
+.profileInput small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #c8392c;
+    visibility: hidden;
+}
+
+.profileInput.invaild small {
+    visibility: visible;
+}
+
+/* job validation */
+.jobInput {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.jobInput input {
+    background-color: #edf0f1;
+    border: none;
+    font-size: 14px;
+    padding: 10px;
+    width: 400px;
+    max-width: 100%;
+}
+
+.jobInput.vaild input#title,
+.jobInput.vaild input#class,
+.jobInput.vaild input#exper,
+.jobInput.vaild input#salary,
+.jobInput.vaild input#date {
+    border: 2px solid #22c1c3;
+}
+
+.jobInput.invaild input#title,
+.jobInput.invaild input#class,
+.jobInput.invaild input#exper,
+.jobInput.invaild input#salary,
+.jobInput.invaild input#date {
+    border: 2px solid #c8392c;
+}
+
+
+.jobInput i.fa-check-circle,
+.jobInput i.fa-exclamation-circle {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.jobInput i.full {
+    position: absolute;
+    top: 20px;
+    left: 98%;
+    visibility: hidden;
+}
+
+.jobInput i.half {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    visibility: hidden;
+}
+
+.jobInput i.quarter {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    visibility: hidden;
+}
+
+.jobInput i.skills {
+    position: absolute;
+    top: 20px;
+    left: 380px;
+    visibility: hidden;
+}
+
+.jobInput.vaild .fa-check-circle,
+.jobInput.vaild #salary.fa-check-circle {
+    color: #22c1c3;
+    visibility: visible;
+}
+
+.jobInput.invaild .fa-exclamation-circle {
+    color: #c8392c;
+    visibility: visible;
+}
+
+.jobInput small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #c8392c;
+    visibility: hidden;
+}
+
+.jobInput.invaild small {
+    visibility: visible;
+}
