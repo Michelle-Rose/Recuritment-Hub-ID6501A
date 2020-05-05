@@ -410,7 +410,6 @@ aside #aboutSide {
 /* profile */
 #profileSide {
     float: left;
-    width: 25%;
     margin-top: 10px;
 }
 
@@ -471,6 +470,9 @@ aside #aboutSide {
 
 #cancel:hover {
     background-color: #fdbb2d;
+}
+#upf{
+    float: right;
 }
 
 /* listing */
