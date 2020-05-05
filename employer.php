@@ -35,12 +35,11 @@
                     <div class="pagehead">
                         <h1>Welcome to your Profile</h1>
                     </div>
-                    <aside id="profileSide" class=col3>
-                        <div class="avatar">
+                    <div class="avatar col5">
                             <img src="img/profile.png" alt="profile photo">
                         </div>
-                    </aside>
-                    <ul id="profile" class="col9">
+                    <div id="profile" class="col7">
+                    <ul >
                         <li class="">
                             <h3 class="title">Company Information</h3>
                             <p>
@@ -82,6 +81,8 @@
                             </p>
                         </li>
                     </ul>
+                    </div>
+                    
                 </div>
             </section>
             <section id="listings">

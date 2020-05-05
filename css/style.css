@@ -17,7 +17,7 @@ h1,
 h2,
 h3 {
     color: #22c1c3;
-    font-size: 18pt;
+    font-size: 16pt;
 }
 
 ul {
@@ -190,7 +190,7 @@ header li {
 header a {
     color: #edf0f1;
     text-decoration: none;
-    font-size: 16pt;
+    font-size: 12pt;
     font-weight: 500;
 }
 
@@ -203,7 +203,7 @@ header h1 {
 }
 
 header #logo a {
-    font-size: 30pt;
+    font-size: 20pt;
     color: white;
 }
 
@@ -260,7 +260,6 @@ footer {
 
 /* Newsletter */
 #newsletter {
-    padding: 15px;
     background: #22c1c3;
     color: #edf0f1;
 }
@@ -272,14 +271,12 @@ footer {
 
 #newsletter form {
     float: right;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 #newsletter input[type="email"] {
-
-    width: 500px;
-    padding: 10px 20px;
-
+    width: 350px;
+    padding: 10px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -314,7 +311,7 @@ footer {
     float: left;
     text-align: center;
     width: 30%;
-    padding: 10px;
+    padding: 20px;
 }
 
 /* About */

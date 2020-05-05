@@ -92,7 +92,6 @@
                 <img src="img/datacom.jpg">
                 <img src="img/deloitte.jpg">
                 <img src="img/hays.jpg">
-                <br>
                 <img src="img/hudson.jpg">
                 <img src="img/kordia.jpg">
                 <img src="img/momentum.jpg">
@@ -100,14 +99,12 @@
                 <img src="img/projectplus.jpg">
                 <img src="img/recruitment studio.jpg">
                 <img src="img/socialite.jpg">
-                <br>
                 <img src="img/westpac.jpg">
                 <img src="img/weta.jpg">
                 <img src="img/xero.jpg">
                 <img src="img/business.jpg">
                 <img src="img/defence.jpg">
                 <img src="img/health.jpg">
-                <img src="img/wellington.jpg">
             </div>
         </div>
     </section>
