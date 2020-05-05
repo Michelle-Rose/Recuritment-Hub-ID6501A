@@ -466,6 +466,9 @@ aside #aboutSide {
     color: #edf0f1;
     font-size: 12pt;
     font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5px;
 }
 
 #cancel:hover {
@@ -568,6 +571,11 @@ aside #aboutSide {
     color: #edf0f1;
     font-size: 10pt;
     font-weight: bold;
+}
+.editDetials select{
+    width: 95%;
+    padding: 12px 20px;
+    margin: 8px 0;
 }
 
 .delete:hover {
@@ -1124,7 +1132,7 @@ input[type=text] {
 .profileInput.invaild small {
     visibility: visible;
 }
-.profileInput select {
+.profileInput select, .jobInput select{
     width: 90%;
     padding: 10px;
     font-size: 14px;

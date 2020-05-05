@@ -39,32 +39,41 @@
                                 <input type="text" required class="jobContent" required id="title" onfocus="highlight('title')"
                                     onblur="removeH('title')" placeholder="Job Listing Title">
                                 <br>
-                                <i class="fas fa-pencil-ruler"></i>
+                                <i class="fas fa-pencil-ruler icon"></i>
+                                <?php
+                                $mysqli= new mysqli('localhost','root','','recuritmenthub');
+                                $classificationSet = $mysqli->query("SELECT ClassName FROM classification");
+                                ?>
                                 <span>
-                                    <input type="text" required class="jobContent" id="class"
-                                        onfocus="highlight('class')" onblur="removeH('class')"
-                                        placeholder="Classfication">
+                                    <select id="classDDL" name="classification">
+                                        <option>Classification</option>
+                                        <?php
+                                        while($rows = $classificationSet -> fetch_assoc()){
+                                            $ClassName = $rows['ClassName'];
+                                            echo "<option value ='$ClassName'>$ClassName</option>";
+                                        }
+                                        ?>
+                                    </select>
                                 </span>
                                 <br>
-                                <i class="fas fa-suitcase"></i>
+                                <i class="fas fa-suitcase icon"></i>
                                 <span>
                                     <input type="text" required class="jobContent" id="exper"
                                         onfocus="highlight('exper')" onblur="removeH('exper')"
                                         placeholder="0-x years experience">
                                 </span>
                                 <br>
-                                <span id=icon>
-                                    <b> $$ </b>
+                                <i class="fas fa-money-bill-wave icon"></i>
+                                <span>
                                     <input type="text" class="jobContent" id="salary" onfocus="highlight('salary')"
                                         onblur="removeH('salary')" placeholder="$$$ - $$$ anual salary">
                                 </span>
                                 <br>
-                                <i class="fas fa-play"></i>
+                                <i class="fas fa-play icon"></i>
                                 <span>
                                     <input type="text" class="jobContent" id="date" onfocus="highlight('date')"
                                         onblur="removeH('date')" placeholder="start date">
                                 </span>
-                                <br>
                                 <br>
                                 <p>
                                     <input type="text" class="jobContent" required id="skills" onfocus="highlight('skills')"
@@ -77,7 +86,7 @@
 
 
                                 <button type="submit" class="empProfileBtn">Save</button>
-                                <button type="text" id="cancel">cancel</button>
+                                <a href="employer.php" id="cancel">cancel</a>
                                 <label id=output></label>
 
                             </form>

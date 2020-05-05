@@ -48,13 +48,20 @@
                                     <div class="jobInput">
                                         <i class="fas fa-pencil-ruler icon"></i>
                                         <span>
-                                            <input type="text" required class="jobContent" id="class"
-                                                onfocus="highlight('class')" onblur="removeH('class')"
-                                                placeholder="Classfication">
+                                            <?php
+                                            $mysqli= new mysqli('localhost','root','','recuritmenthub');
+                                            $classificationSet = $mysqli->query("SELECT ClassName FROM classification");
+                                            ?>
+                                            <select id="classDDL" name="classification">
+                                                <option>Classification</option>
+                                                <?php
+                                                    while($rows = $classificationSet -> fetch_assoc()){
+                                                        $ClassName = $rows['ClassName'];
+                                                        echo "<option value ='$ClassName'>$ClassName</option>";
+                                                    }
+                                                    ?>
+                                            </select>
                                         </span>
-                                        <i class="fas fa-check-circle half"></i>
-                                        <i class="fas fa-exclamation-circle half"></i>
-                                        <small>Error Message</small>
                                     </div>
                                     <div class="jobInput">
                                         <i class="fas fa-suitcase icon"></i>
@@ -68,8 +75,8 @@
                                         <small>Error Message</small>
                                     </div>
                                     <div class="jobInput">
+                                    <i class="fas fa-money-bill-wave icon"></i>
                                         <span id=icon>
-                                            <b> $$ </b>
                                             <input type="text" class="jobContent" id="salary"
                                                 onfocus="highlight('salary')" onblur="removeH('salary')"
                                                 placeholder="$$$ - $$$ anual salary">
@@ -104,7 +111,7 @@
                                     </div>
                                     <p>
                                         <button type="submit" class="empProfileBtn">Save</button>
-                                        <button type="text" id="cancel">cancel</button>
+                                        <a href="employer.php" id="cancel">cancel</a>
                                         <label id=output></label>
                                     </p>
                                 </form>

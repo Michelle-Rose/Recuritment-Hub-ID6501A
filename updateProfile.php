@@ -132,7 +132,7 @@
                                 </div>
                                 <p>
                                     <button type="submit" class="empProfileBtn">Save</button>
-                                    <button type="text" id="cancel">cancel</button>
+                                    <a href="employer.php" id="cancel">cancel</a>
                                     <label id=output></label>
                                 </p>
                             </li>
