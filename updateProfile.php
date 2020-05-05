@@ -53,11 +53,13 @@
                                     <small>Error Message</small>
                                 </div>
                                 <div class="profileInput">
-                                    <input type="text" class="employerContent" id="sector" onfocus="highlight('sector')"
-                                        onblur="removeH('sector')" placeholder="Sector">
-                                    <i class="fas fa-check-circle"></i>
-                                    <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error Message</small>
+                                    <select id=sectorDDL name=Sector>
+                                        <option>Sector</option>
+                                        <option>Public</option>
+                                        <option>Private</option>
+                                        <option>Not for profit</option>
+                                        <option>Other</option>
+                                    </select>
                                 </div>
                                 <div class="profileInput">
                                     <input type="text" class="employerContent" id="fNme" onfocus="highlight('fNme')"

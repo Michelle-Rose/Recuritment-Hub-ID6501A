@@ -1124,6 +1124,14 @@ input[type=text] {
 .profileInput.invaild small {
     visibility: visible;
 }
+.profileInput select {
+    width: 90%;
+    padding: 10px;
+    font-size: 14px;
+    color: grey;
+    background-color: #edf0f1;
+    border: none;
+}
 
 /* job validation */
 .jobInput {
