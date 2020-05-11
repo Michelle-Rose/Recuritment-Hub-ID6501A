@@ -30,7 +30,8 @@
     </header>
     <!-- to make the sliding account i followed a Florin Pop guide 
           https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/ -->
-    <div class=account>
+    <div class="container pageContent">
+        <div class=account>
         <div class="container" id="container">
             <div class="formContainer signupcontainer">
                 <form action="#" id="signupForm">
@@ -39,7 +40,7 @@
                         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social"><i class="fab fa-google"></i></a>
                         <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    </div> 
                     <ul>
                         <div class="formInput">
                             <input type="text" id="cNme" onfocus="highlight('cNme')" onblur="removeH('cNme')"
@@ -90,7 +91,7 @@
             <div class="formContainer signinContainer">
                 <form action="#">
                     <h1>Sign into your Company Profile</h1>
-                    <div class="social">
+                  <div class="social">
                         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social"><i class="fab fa-google"></i></a>
                         <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
@@ -120,6 +121,7 @@
             </div>
         </div>
     </div>
+</div>
     <footer>
         <p>Recuritment Hub, website for Responsive Web <br> Michelle Holmes 21900986</p>
     </footer>

@@ -790,12 +790,16 @@ input[type=text] {
 }
 
 /* account */
+.pageContent{
+    padding: 80px 50px;
+}
+
 .account {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     margin: -20px 0 50px;
 }
 
@@ -827,7 +831,6 @@ input[type=text] {
     max-width: 100%;
     min-height: 480px;
 }
-
 .formContainer form {
     background: white;
     display: flex;
@@ -1034,7 +1037,7 @@ input[type=text] {
     border: none;
     font-size: 14px;
     padding: 10px;
-    width: 400px;
+    width: 300px;
     max-width: 100%;
 }
 
