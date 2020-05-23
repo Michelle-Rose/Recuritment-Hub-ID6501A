@@ -36,9 +36,26 @@
                         <div class="pagehead">
                             <h1>Update job Listing</h1>
                             <form action="#" onsubmit="return editJobValidation()">
-                                <input type="text" required class="jobContent" required id="title" onfocus="highlight('title')"
-                                    onblur="removeH('title')" placeholder="Job Listing Title">
+                                <input type="text" required class="jobContent" required id="title"
+                                    onfocus="highlight('title')" onblur="removeH('title')"
+                                    placeholder="Job Listing Title">
                                 <br>
+                                <i class="fas fa-map-marker-alt icon"></i>
+                                <span>
+                                    <?php
+                                    $mysqli= new mysqli('localhost','root','','recuritmenthub');
+                                    $locationSet = $mysqli->query("SELECT locName FROM locationdb");
+                                    ?>
+                                    <select id="locDDL" name="location">
+                                        <option>Select Location</option>
+                                        <?php
+                                        while($rows = $locationSet -> fetch_assoc()){
+                                            $locName = $rows['locName'];
+                                            echo "<option value ='$locName'>$locName</option>";
+                                        }
+                                        ?>
+                                    </select>
+                                </span>
                                 <i class="fas fa-pencil-ruler icon"></i>
                                 <?php
                                 $mysqli= new mysqli('localhost','root','','recuritmenthub');
@@ -76,8 +93,9 @@
                                 </span>
                                 <br>
                                 <p>
-                                    <input type="text" class="jobContent" required id="skills" onfocus="highlight('skills')"
-                                        onblur="removeH('skills')" placeholder="Required Skills">
+                                    <input type="text" class="jobContent" required id="skills"
+                                        onfocus="highlight('skills')" onblur="removeH('skills')"
+                                        placeholder="Required Skills">
                                 </p>
                                 <br>
                                 <textarea type="text" class="jobContent descript" required id="descript"

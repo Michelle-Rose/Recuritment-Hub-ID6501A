@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -38,17 +38,17 @@
                     professionals, and anyone else within New Zealand the world through its innovative practices.
                     Recruitment Hub welcomes your feedback on its products. Please do so by filling in the form
                     below. </p>
-                <form id=feedbackForm>
-                    <input type="text"  class="feedbackContent" id="nme" onfocus="highlight('nme')"
+                <form id=feedbackForm method="GET" action="php/feedbackSave.php">
+                    <input type="text"  class="feedbackContent" id="nme" name="nme" onfocus="highlight('nme')"
                         onblur="removeH('nme')" placeholder="Name">
-                    <input type="text" required class="feedbackContent" id="email" onfocus="highlight('email')"
+                    <input type="text" required class="feedbackContent" id="email" name="email" onfocus="highlight('email')"
                         onblur="removeH('email')" placeholder="Email is required">
-                    <input type="text" required class="feedbackContent" id="subject" onfocus="highlight('subject')"
+                    <input type="text" required class="feedbackContent" id="subject" name="subject" onfocus="highlight('subject')"
                         onblur="removeH('subject')" placeholder="Subject is required">
-                    <input type="text" required class="feedbackContent" id="url" onfocus="highlight('url')"
+                    <input type="text" required class="feedbackContent" id="url" name="url" onfocus="highlight('url')"
                         onblur="removeH('url')" placeholder="Page or URL is required">
                     <br><label class="feedbackContent" for="comments">Comments</label>
-                    <br><textarea type="text" required class="feedbackContent" id="comment"
+                    <br><textarea type="text" required class="feedbackContent" id="comment" name="comment"
                         onfocus="highlight('comment')" onblur="removeH('comment')"></textarea>
 
                     <br><button type="submit" class="fbsubmitBtn">Submit Feedback</button>

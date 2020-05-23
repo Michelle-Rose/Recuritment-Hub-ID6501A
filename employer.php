@@ -88,6 +88,7 @@
             <section id="listings">
                 <div class="container">
                     <form method="get" action="addJob.php">
+                    <input type="hidden" id="empID" name="empID" value="9999">
                         <button type="submit" class="empProfileBtn">
                             Add Listing
                         </button>
@@ -98,11 +99,11 @@
                             <div class="detials">
                                 <h4><b>Job Listing Title</b></h4>
                                 <p><img src="img/logo.jpg" alt="Company Logo"> Company Name</p>
-                                <i class="fas fa-map-marker-alt"></i><span>location</span><br>
-                                <i class="fas fa-pencil-ruler"></i><span>Classfication</span><br>
-                                <i class="fas fa-suitcase"></i><span>0-x years experience</span><br>
-                                <span id=icon>$$</span><span>$ - $$$ anual salary</span><br>
-                                <i class="fas fa-play"></i><span>start date</span><br> <br>
+                                <i class="fas fa-map-marker-alt icon"></i><span>location</span><br>
+                                <i class="fas fa-pencil-ruler icon"></i><span>Classfication</span><br>
+                                <i class="fas fa-suitcase icon"></i><span>0-x years experience</span><br>
+                                <i class="fas fa-money-bill-wave icon"></i><span>$ - $$$ anual salary</span><br>
+                                <i class="fas fa-play icon"></i><span>start date</span><br> <br>
                                 <b>Required Skill Set: </b>
                                 <p>List of Skills</p><br>
                                 <p>Description: brief description <a href="#">Find out more</a></p>

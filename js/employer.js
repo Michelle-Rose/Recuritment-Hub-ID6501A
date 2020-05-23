@@ -43,7 +43,7 @@ function vaildateInput() {
     names = /^[a-zA-Z\-]+[ ]*[a-zA-Z\-]*$/;
     address_pattern = /^([0-9a-zA-Z]{1,5})[ ][a-zA-Z]+[ ][a-zA-Z]*$/
     code = /^[0-9]{4}$/
-    mobileNum = /^[0][2][1579]{1}\d{6,7}$/;
+    mobileNum = /^[0][2][12579]{1}\d{6,7}$/;
     email_pattern = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.((com)|(net)|(my))$/;
 
     if (!names.test(companyValue)) {
