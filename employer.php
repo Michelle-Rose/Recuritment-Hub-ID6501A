@@ -10,24 +10,10 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div id="logo">
-                <!-- Logo -->
-                <h1><a class="logo" href="index.php"><img src="img/logoIcon.png" alt="Recruitment Hub"><span
-                            class="highlight"> Recruitment </span>Hub</a></h1>
-            </div>
-            <!-- Menu Bar -->
-            <nav>
-                <ul>
-                    <li><a href="jobs.php">Jobs</a></li>
-                    <li class="current"><a href="employer.php">Employer</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="feedback.php">Feedback</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php
+    require "php/header.php";
+    ?>
+    
     <div id=page>
         <div class="container white">
             <section id=profile>
@@ -36,59 +22,59 @@
                         <h1>Welcome to your Profile</h1>
                     </div>
                     <div class="avatar col5">
-                            <img src="img/profile.png" alt="profile photo">
-                        </div>
-                    <div id="profile" class="col7">
-                    <ul >
-                        <li class="">
-                            <h3 class="title">Company Information</h3>
-                            <p>
-                                <label class="empProfile" for="busNme">Business Name: </label>
-                            </p>
-                            <p>
-                                <label class="empProfile" for="Sector">Sector: </label>
-                            </p>
-                            <p>
-                                <label class="empProfile" for="fNme">First Name: </label>
-                            </p>
-                            <p>
-                                <label class="empProfile" for="lNme">Last Name: </label>
-                            </p>
-
-                            <p>
-                                <label class="empProfile" for="address">Address: </label>
-                            </p>
-
-                        </li>
-                        <li>
-                            <h3 class="title">Contact Information</h3>
-                            <p>
-                                <label class="empProfile" for="phNum">Phone Number: </label>
-                            </p>
-                            <p>
-                                <label class="empProfile" for="email">Email: </label>
-                            </p>
-                        </li>
-                        <li>
-                            <h3 class="title">Description of Business</h3>
-                            <p>
-                                <label class="empProfile" for="des">Description</label>
-                            </p>
-                            <p>
-                                <form method="get" action="updateProfile.php">
-                                    <button type="submit" class="empProfileBtn">Update</button>
-                                </form>
-                            </p>
-                        </li>
-                    </ul>
+                        <img src="img/profile.png" alt="profile photo">
                     </div>
-                    
+                    <div id="profile" class="col7">
+                        <ul>
+                            <li class="">
+                                <h3 class="title">Company Information</h3>
+                                <p>
+                                    <label class="empProfile" for="busNme">Business Name: </label>
+                                </p>
+                                <p>
+                                    <label class="empProfile" for="Sector">Sector: </label>
+                                </p>
+                                <p>
+                                    <label class="empProfile" for="fNme">First Name: </label>
+                                </p>
+                                <p>
+                                    <label class="empProfile" for="lNme">Last Name: </label>
+                                </p>
+
+                                <p>
+                                    <label class="empProfile" for="address">Address: </label>
+                                </p>
+
+                            </li>
+                            <li>
+                                <h3 class="title">Contact Information</h3>
+                                <p>
+                                    <label class="empProfile" for="phNum">Phone Number: </label>
+                                </p>
+                                <p>
+                                    <label class="empProfile" for="email">Email: </label>
+                                </p>
+                            </li>
+                            <li>
+                                <h3 class="title">Description of Business</h3>
+                                <p>
+                                    <label class="empProfile" for="des">Description</label>
+                                </p>
+                                <p>
+                                    <form method="get" action="updateProfile.php">
+                                        <button type="submit" class="empProfileBtn">Update</button>
+                                    </form>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </section>
             <section id="listings">
                 <div class="container">
                     <form method="get" action="addJob.php">
-                    <input type="hidden" id="empID" name="empID" value="9999">
+                        <input type="hidden" id="empID" name="empID" value="9999">
                         <button type="submit" class="empProfileBtn">
                             Add Listing
                         </button>

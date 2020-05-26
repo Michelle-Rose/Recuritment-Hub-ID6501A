@@ -10,24 +10,9 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div id="logo">
-                <!-- Logo -->
-                <h1><a class="logo" href="index.php"><img src="img/logoIcon.png" alt="Recruitment Hub"><span
-                            class="highlight"> Recruitment </span>Hub</a></h1>
-            </div>
-            <!-- Menu Bar -->
-            <nav>
-                <ul>
-                    <li><a href="jobs.php">Jobs</a></li>
-                    <li class="current"><a href="employer.php">Employer</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="feedback.php">Feedback</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php
+    require "php/header.php";
+    ?>
     <div id="updateProfile">
         <section id=editProfile>
             <div class="container">
@@ -42,12 +27,10 @@
                 <div id="upf" class="col8">
                     <ul>
                         <h3 class="title">Company Information</h3>
-                        <form method="POST" action="php/profileSave.php" >
+                        <form method="POST" action="php/profileSave.php">
                             <li>
                                 <div class="profileInput">
-                                    <input type="text" class="employerContent" id="busName" name="cNme"
-                                        onfocus="highlight('busName')" onblur="removeH('busName')"
-                                        placeholder="Business Name">
+                                    <input type="text" class="employerContent" id="busName" name="cNme" onfocus="highlight('busName')" onblur="removeH('busName')" placeholder="Business Name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                     <small>Error Message</small>
@@ -62,45 +45,37 @@
                                     </select>
                                 </div>
                                 <div class="profileInput">
-                                    <input type="text" class="employerContent" id="fNme" name="fNme" onfocus="highlight('fNme')"
-                                        onblur="removeH('fNme')" placeholder="First Name">
+                                    <input type="text" class="employerContent" id="fNme" name="fNme" onfocus="highlight('fNme')" onblur="removeH('fNme')" placeholder="First Name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                     <small>Error Message</small>
                                 </div>
                                 <div class="profileInput">
-                                    <input type="text" class="employerContent" id="lNme" name="lNme" onfocus="highlight('lNme')"
-                                        onblur="removeH('lNme')" placeholder="Last Name">
+                                    <input type="text" class="employerContent" id="lNme" name="lNme" onfocus="highlight('lNme')" onblur="removeH('lNme')" placeholder="Last Name">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                     <small>Error Message</small>
                                 </div>
                                 <div class="profileInput">
-                                    <input type="text" class="employerContent" id="address" name="address"
-                                        onfocus="highlight('address')" onblur="removeH('address')"
-                                        placeholder="Address Line 1">
+                                    <input type="text" class="employerContent" id="address" name="address" onfocus="highlight('address')" onblur="removeH('address')" placeholder="Address Line 1">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                     <small>Error Message</small>
                                 </div>
                                 <div class="profileInput">
-                                    <input type="text" class="employerContent" id="postcode" name="code"
-                                        onfocus="highlight('postcode')" onblur="removeH('postcode')"
-                                        placeholder="Post Code">
+                                    <input type="text" class="employerContent" id="postcode" name="code" onfocus="highlight('postcode')" onblur="removeH('postcode')" placeholder="Post Code">
                                     <i class="fas fa-check-circle code"></i>
                                     <i class="fas fa-exclamation-circle code"></i>
                                     <small>Error Message</small>
                                 </div>
                                 <div class="profileInput">
-                                    <input type="text" class="employerContent" id="suburb" name="sub" onfocus="highlight('suburb')"
-                                        onblur="removeH('suburb')" placeholder="Suburb">
+                                    <input type="text" class="employerContent" id="suburb" name="sub" onfocus="highlight('suburb')" onblur="removeH('suburb')" placeholder="Suburb">
                                     <i class="fas fa-check-circle place"></i>
                                     <i class="fas fa-exclamation-circle place"></i>
                                     <small>Error Message</small>
                                 </div>
                                 <div class="profileInput">
-                                    <input type="text" class="employerContent" id="city" name="city" onfocus="highlight('city')"
-                                        onblur="removeH('city')" placeholder="City">
+                                    <input type="text" class="employerContent" id="city" name="city" onfocus="highlight('city')" onblur="removeH('city')" placeholder="City">
                                     <i class="fas fa-check-circle place"></i>
                                     <i class="fas fa-exclamation-circle place"></i>
                                     <small>Error Message</small>
@@ -109,15 +84,13 @@
                             <li>
                                 <h3 class="title">Contact Information</h3>
                                 <div class="profileInput">
-                                    <input type="text" class="employerContent" id="phNum" name="phNum" onfocus="highlight('phNum')"
-                                        onblur="removeH('phNum')" placeholder="Phone Number">
+                                    <input type="text" class="employerContent" id="phNum" name="phNum" onfocus="highlight('phNum')" onblur="removeH('phNum')" placeholder="Phone Number">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                     <small>Error Message</small>
                                 </div>
                                 <div class="profileInput">
-                                    <input type="text" class="employerContent" id="email" name="email" onfocus="highlight('email')"
-                                        onblur="removeH('email')" placeholder="Email">
+                                    <input type="text" class="employerContent" id="email" name="email" onfocus="highlight('email')" onblur="removeH('email')" placeholder="Email">
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                     <small>Error Message</small>
@@ -126,9 +99,7 @@
                             <li>
                                 <h3 class="title">Description of Business</h3>
                                 <div class="profileInput">
-                                    <textarea type="text" required class=profileDescript id="descript" name="des"
-                                        onfocus="highlight('descript')" onblur="removeH('descript')"
-                                        class="employerContent"></textarea>
+                                    <textarea type="text" required class=profileDescript id="descript" name="des" onfocus="highlight('descript')" onblur="removeH('descript')" class="employerContent"></textarea>
                                 </div>
                                 <p>
                                     <input type="submit" value="Save" class="empProfileBtn">

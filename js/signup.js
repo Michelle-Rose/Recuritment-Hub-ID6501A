@@ -1,19 +1,22 @@
 /* sign up form validation */
-
-const signup = document.getElementById('signupForm');
-const company = document.getElementById("cNme");
-const firstName = document.getElementById("fNme");
-const lastName = document.getElementById("lNme");
-const email = document.getElementById("email");
-const password = document.getElementById("pass");
-const password2 = document.getElementById("pass2");
-signup.addEventListener('submit', (e) => {
-    e.preventDefault();
-    vaildateInput();
+document.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    const signup = document.getElementById('signupForm');
+    signup.addEventListener('submit', (e) => {
+        e.preventDefault();
+        vaildateInput();
+    });
 });
 
 
+
 function vaildateInput() {
+    const company = document.getElementById("cNme");
+    const firstName = document.getElementById("fNme");
+    const lastName = document.getElementById("lNme");
+    const email = document.getElementById("email");
+    const password = document.getElementById("pass");
+    const password2 = document.getElementById("pass2");
     //geting the values from inputs
     const companyValue = company.value
     const firstNameValue = firstName.value
@@ -55,11 +58,11 @@ function vaildateInput() {
         setVaild(email);
     }
     if (!passwords.test(passwordValue)) {
-        setInvaild(password, 'Password is weak, must be 6-20 characters and at least 1 digit');
+       setInvaild(password, 'Password is weak, must be 6-20 characters and at least 1 digit');
     } else {
         setVaild(password);
     }
-    if(password2Value !== passwordValue){
+    if (password2Value !== passwordValue) {
         setInvaild(password, 'Passwords do not match');
         setInvaild(password2, 'Passwords do not match');
     } else {

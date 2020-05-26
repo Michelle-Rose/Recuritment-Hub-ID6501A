@@ -9,53 +9,38 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div id="logo">
-                <!-- Logo -->
-                <h1><a class="logo" href="index.php"><img src="img/logoIcon.png" alt="Recruitment Hub"><span
-                            class="highlight"> Recruitment </span>Hub</a></h1>
-            </div>
-            <!-- Menu Bar -->
-            <nav>
-                <ul>
-                    <li class="current"><a href="jobs.php">Jobs</a></li>
-                    <li><a href="employer.php">Employer</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="feedback.php">Feedback</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php
+    require "php/header.php";
+    ?>
     <section id="jobSearch">
         <!--Search options-->
         <div class="jobsSearch">
             <input type="text" class="searchForm" placeholder="Enter Keyword">
             <?php
-                $mysqli= new mysqli('localhost','root','','recuritmenthub');
-                $classificationSet = $mysqli->query("SELECT ClassName FROM classification");
-                ?>
+            $mysqli = new mysqli('localhost', 'root', '', 'recuritmenthub');
+            $classificationSet = $mysqli->query("SELECT ClassName FROM classification");
+            ?>
             <select id="classDDL" name="classification">
                 <option>---Classification---</option>
                 <?php
-                    while($rows = $classificationSet -> fetch_assoc()){
-                        $ClassName = $rows['ClassName'];
-                        echo "<option value ='$ClassName'>$ClassName</option>";
-                    }
-                    ?>
+                while ($rows = $classificationSet->fetch_assoc()) {
+                    $ClassName = $rows['ClassName'];
+                    echo "<option value ='$ClassName'>$ClassName</option>";
+                }
+                ?>
             </select>
             <select id="locDDL" name=location>
-            <?php
-                $mysqli= new mysqli('localhost','root','','recuritmenthub');
+                <?php
+                $mysqli = new mysqli('localhost', 'root', '', 'recuritmenthub');
                 $locationSet = $mysqli->query("SELECT LocName FROM locationdb");
                 ?>
                 <option>------Location------</option>
                 <?php
-                    while($rows = $locationSet -> fetch_assoc()){
-                        $LocName = $rows['LocName'];
-                        echo "<option value ='$LocName'>$LocName</option>";
-                    }
-                    ?>
+                while ($rows = $locationSet->fetch_assoc()) {
+                    $LocName = $rows['LocName'];
+                    echo "<option value ='$LocName'>$LocName</option>";
+                }
+                ?>
             </select>
             <input type="button" class="searchBtn" value="Find Job">
         </div>

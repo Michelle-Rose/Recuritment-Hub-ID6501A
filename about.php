@@ -9,24 +9,10 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div id="logo">
-                <!-- Logo -->
-                <h1><a class="logo" href="index.php"><img src="img/logoIcon.png" alt="Recruitment Hub"><span
-                            class="highlight"> Recruitment </span>Hub</a></h1>
-            </div>
-            <!-- Menu Bar -->
-            <nav>
-                <ul>
-                    <li><a href="jobs.php">Jobs</a></li>
-                    <li><a href="employer.php">Employer</a></li>
-                    <li class="current"><a href="about.php">About</a></li>
-                    <li><a href="feedback.php">Feedback</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php
+    require "php/header.php";
+    ?>
+    
 
     <section id="main">
         <div class="container" id="aboutContent">

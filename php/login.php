@@ -5,6 +5,13 @@
 
 <body>
     <?php
+    if (isset($_POST['login-submit'])) {
+    }
+    else{
+    header("Location: ../index.php");
+        exit();
+    }
+
     //connect to database
     $connection = mysqli_connect("localhost", "root", "", "recuritmenthub");
 
@@ -31,7 +38,7 @@
     $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
     
     while ($row = mysqli_fetch_row($result)){
-        if($row[9]== $emailInput && $row[12] == $passInput){
+        if($row[10]== $emailInput && $row[13] == $passInput){
             //do something
             echo "<p>if</p>";
         break;

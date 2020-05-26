@@ -10,30 +10,16 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div id="logo">
-                <!-- Logo -->
-                <h1><a class="logo" href="index.php"><img src="img/logoIcon.png" alt="Recruitment Hub"><span class="highlight"> Recruitment </span>Hub</a></h1>
-            </div>
-            <!-- Menu Bar -->
-            <nav>
-                <ul>
-                    <li><a href="jobs.php">Jobs</a></li>
-                    <li class="current"><a href="employer.php">Employer</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="feedback.php">Feedback</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php
+    require "php/header.php";
+    ?>
     <!-- to make the sliding account i followed a Florin Pop guide 
           https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/ -->
     <div class="container pageContent">
         <div class=account>
             <div class="container" id="container">
                 <div class="formContainer signupcontainer">
-                    <form method="POST" action="php/signupSave.php" >
+                    <form id="signupForm">
                         <h1>Create a Company Profile</h1>
                         <div class="social">
                             <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>

@@ -179,10 +179,10 @@ header {
     padding-bottom: 15px;
     min-height: 70px;
     border-bottom: #fdbb2d 3px solid;
+    text-align: right;
 }
 
 header li {
-    float: left;
     display: inline;
     padding: 0 20px 0 20px;
 }
@@ -208,8 +208,7 @@ header #logo a {
 }
 
 header nav {
-    float: right;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 header .highlight,
@@ -218,8 +217,32 @@ header .current a {
     font-weight: bold;
 }
 
-header a:hover {
-    color: #0088a9;
+header a:hover,
+header button:hover,
+header #button:hover {
+    color: #fdbb2d;
+    font-weight: bold;
+}
+
+header input[type=email],
+header input[type=password] {
+    width: 150px;
+    padding: 5px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+header button,
+#button {
+    background-color: #fdbb2d;
+    border: 0;
+    padding: 5px 20px;
+    margin-left: 5px;
+    color: #edf0f1;
+    font-size: 12pt;
     font-weight: bold;
 }
 
@@ -449,6 +472,7 @@ aside #aboutSide {
     font-weight: bold;
 }
 
+
 .empProfileBtn:hover {
     background-color: #22c1c3;
 }
@@ -474,7 +498,8 @@ aside #aboutSide {
 #cancel:hover {
     background-color: #fdbb2d;
 }
-#upf{
+
+#upf {
     float: right;
 }
 
@@ -572,7 +597,8 @@ aside #aboutSide {
     font-size: 10pt;
     font-weight: bold;
 }
-.editDetials select{
+
+.editDetials select {
     width: 95%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -584,7 +610,9 @@ aside #aboutSide {
 
 
 /*Text boxes*/
-input[type=text] {
+input[type=text] ,
+input[type=email],
+input[type=password]{
     width: 90%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -790,7 +818,7 @@ input[type=text] {
 }
 
 /* account */
-.pageContent{
+.pageContent {
     padding: 80px 50px;
 }
 
@@ -831,6 +859,7 @@ input[type=text] {
     max-width: 100%;
     min-height: 480px;
 }
+
 .formContainer form {
     background: white;
     display: flex;
@@ -865,6 +894,26 @@ input[type=text] {
     width: 100%;
 }
 
+
+.signupForm #postcode,
+.signupForm #suburb,
+.signupForm #city {
+    background-color: #edf0f1;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 48%;
+}
+
+.signupForm select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: grey;
+    background-color: #edf0f1;
+    border: none;
+}
+
 #name {
     background-color: #edf0f1;
     border: none;
@@ -885,6 +934,22 @@ input[type=text] {
     width: 150px;
     height: 30px;
     padding: 5px;
+}
+
+
+
+.signup input[type=submit] {
+    border: 1px solid #fdbb2d;
+    background: #fdbb2d;
+    color: #edf0f1;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 80ms ease-in;
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    float: right;
 }
 
 .account button:active,
@@ -1032,16 +1097,20 @@ input[type=text] {
     position: relative;
 }
 
-.formInput input {
+.formInput input,
+.formInput input[type=email],
+.formInput input[type=password] {
     background-color: #edf0f1;
     border: none;
     font-size: 14px;
     padding: 10px;
-    width: 300px;
+    width: 100%;
     max-width: 100%;
 }
 
-.formInput.vaild input {
+.formInput.vaild input,
+.formInput.vaild input[type=email],
+.formInput.vaild input[type=password] {
     border: 2px solid #22c1c3;
 }
 
@@ -1135,7 +1204,9 @@ input[type=text] {
 .profileInput.invaild small {
     visibility: visible;
 }
-.profileInput select, .jobInput select{
+
+.profileInput select,
+.jobInput select {
     width: 90%;
     padding: 10px;
     font-size: 14px;

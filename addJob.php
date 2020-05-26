@@ -10,24 +10,9 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div id="logo">
-                <!-- Logo -->
-                <h1><a class="logo" href="index.php"><img src="img/logoIcon.png" alt="Recruitment Hub"><span
-                            class="highlight"> Recruitment </span>Hub</a></h1>
-            </div>
-            <!-- Menu Bar -->
-            <nav>
-                <ul>
-                    <li><a href="jobs.php">Jobs</a></li>
-                    <li class="current"><a href="employer.php">Employer</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="feedback.php">Feedback</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php
+    require "php/header.php";
+    ?>
     <div id="AddListing">
         <section id="listings">
             <div class="container">
@@ -41,9 +26,7 @@
                             </form>-->
                                 <form method="GET" action="php/jobsave.php">
                                     <div class="jobInput">
-                                        <input type="text" class="jobContent" required id="title"
-                                            onfocus="highlight('title')" onblur="removeH('title')"
-                                            placeholder="Job Listing Title" id="jobTitle" name="title">
+                                        <input type="text" class="jobContent" required id="title" onfocus="highlight('title')" onblur="removeH('title')" placeholder="Job Listing Title" id="jobTitle" name="title">
                                         <i class="fas fa-check-circle full"></i>
                                         <i class="fas fa-exclamation-circle full"></i>
                                         <small>Error Message</small>
@@ -55,17 +38,17 @@
                                         <i class="fas fa-map-marker-alt icon"></i>
                                         <span>
                                             <?php
-                                            $mysqli= new mysqli('localhost','root','','recuritmenthub');
+                                            $mysqli = new mysqli('localhost', 'root', '', 'recuritmenthub');
                                             $locationSet = $mysqli->query("SELECT locName FROM locationdb");
                                             ?>
                                             <select id="locDDL" name="location">
                                                 <option>Select Location</option>
                                                 <?php
-                                                    while($rows = $locationSet -> fetch_assoc()){
-                                                        $locName = $rows['locName'];
-                                                        echo "<option value ='$locName'>$locName</option>";
-                                                    }
-                                                    ?>
+                                                while ($rows = $locationSet->fetch_assoc()) {
+                                                    $locName = $rows['locName'];
+                                                    echo "<option value ='$locName'>$locName</option>";
+                                                }
+                                                ?>
                                             </select>
                                         </span>
                                     </div>
@@ -78,20 +61,18 @@
                                             <select id="classDDL" name="classification">
                                                 <option>Select Classification</option>
                                                 <?php
-                                                    while($rows = $classificationSet -> fetch_assoc()){
-                                                        $ClassName = $rows['ClassName'];
-                                                        echo "<option value ='$ClassName'>$ClassName</option>";
-                                                    }
-                                                    ?>
+                                                while ($rows = $classificationSet->fetch_assoc()) {
+                                                    $ClassName = $rows['ClassName'];
+                                                    echo "<option value ='$ClassName'>$ClassName</option>";
+                                                }
+                                                ?>
                                             </select>
                                         </span>
                                     </div>
                                     <div class="jobInput">
                                         <i class="fas fa-suitcase icon"></i>
                                         <span>
-                                            <input type="text" class="jobContent" id="exper"
-                                                onfocus="highlight('exper')" onblur="removeH('exper')"
-                                                placeholder="0-x years experience" name="experience">
+                                            <input type="text" class="jobContent" id="exper" onfocus="highlight('exper')" onblur="removeH('exper')" placeholder="0-x years experience" name="experience">
                                         </span>
                                         <i class="fas fa-check-circle quarter"></i>
                                         <i class="fas fa-exclamation-circle quarter"></i>
@@ -100,9 +81,7 @@
                                     <div class="jobInput">
                                         <i class="fas fa-money-bill-wave icon"></i>
                                         <span id=icon>
-                                            <input type="text" class="jobContent" id="salary"
-                                                onfocus="highlight('salary')" onblur="removeH('salary')"
-                                                placeholder="$$$ - $$$ anual salary" name="salary">
+                                            <input type="text" class="jobContent" id="salary" onfocus="highlight('salary')" onblur="removeH('salary')" placeholder="$$$ - $$$ anual salary" name="salary">
                                         </span>
                                         <i class="fas fa-check-circle quarter"></i>
                                         <i class="fas fa-exclamation-circle quarter"></i>
@@ -111,8 +90,7 @@
                                     <div class="jobInput">
                                         <i class="fas fa-play icon"></i>
                                         <span>
-                                            <input type="text" class="jobContent" id="date" onfocus="highlight('date')"
-                                                onblur="removeH('date')" placeholder="start date" name="sDate">
+                                            <input type="text" class="jobContent" id="date" onfocus="highlight('date')" onblur="removeH('date')" placeholder="start date" name="sDate">
                                         </span>
                                         <i class="fas fa-check-circle quarter"></i>
                                         <i class="fas fa-exclamation-circle quarter"></i>
@@ -120,24 +98,18 @@
                                     </div>
 
                                     <div class="jobInput">
-                                        <input type="text" class="jobContent" required id="skill"
-                                            onfocus="highlight('skill')" onblur="removeH('skill')"
-                                            placeholder="Required Skills" id="skills" name="skills">
+                                        <input type="text" class="jobContent" required id="skill" onfocus="highlight('skill')" onblur="removeH('skill')" placeholder="Required Skills" id="skills" name="skills">
                                         <i class="fas fa-check-circle skills"></i>
                                         <i class="fas fa-exclamation-circle skills"></i>
                                         <small>Error Message</small>
                                     </div>
                                     <p>Breif Description:</p>
                                     <div class="jobInput">
-                                        <textarea type="text" required class=jobDescript id="jobBreif"
-                                            onfocus="highlight('jobBreif')" onblur="removeH('jobBreif')"
-                                            class="employerContent" name=brief></textarea>
+                                        <textarea type="text" required class=jobDescript id="jobBreif" onfocus="highlight('jobBreif')" onblur="removeH('jobBreif')" class="employerContent" name=brief></textarea>
                                     </div>
                                     <p>Full Description:</p>
                                     <div class="jobInput">
-                                        <textarea type="text" required class=jobDescript id="jobDescript"
-                                            onfocus="highlight('jobDescript')" onblur="removeH('jobDescript')"
-                                            class="employerContent" name=description></textarea>
+                                        <textarea type="text" required class=jobDescript id="jobDescript" onfocus="highlight('jobDescript')" onblur="removeH('jobDescript')" class="employerContent" name=description></textarea>
                                     </div>
                                     <p>
                                         <input type="submit" class="empProfileBtn" value="save">

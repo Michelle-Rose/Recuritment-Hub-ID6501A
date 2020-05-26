@@ -9,24 +9,9 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div id="logo">
-                <!-- Logo -->
-                <h1><a class="logo" href="index.php"><img src="img/logoIcon.png" alt="Recruitment Hub"><span
-                            class="highlight"> Recruitment </span>Hub</a></h1>
-            </div>
-            <!-- Menu Bar -->
-            <nav>
-                <ul>
-                    <li><a href="jobs.php">Jobs</a></li>
-                    <li><a href="employer.php">Employer</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="feedback.php">Feedback</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php
+    require "php/header.php";
+    ?>
     <section id="banner">
         <div class="container">
             <h1>Recruitment for IT Roles</h1>
@@ -37,8 +22,7 @@
         <div class="container">
             <h1>Sign up to get our Newsletters</h1>
             <form>
-                <input type="email" required id="email" onfocus="highlight('email')" onblur="removeH('email')"
-                    placeholder="Enter Email">
+                <input type="email" required id="email" onfocus="highlight('email')" onblur="removeH('email')" placeholder="Enter Email">
                 <button type="submit" class="submitBtn">Subscribe</button>
             </form>
         </div>
@@ -47,8 +31,7 @@
         <div class="container">
             <h1>Our Top Recruiters</h1>
             <div class="recuriter col4">
-                <a class="logos" href="https://www.datacom.co.nz/Home.aspx" target="_blank"><img
-                        src="img/datacom.jpg"></a>
+                <a class="logos" href="https://www.datacom.co.nz/Home.aspx" target="_blank"><img src="img/datacom.jpg"></a>
                 <p>A company who designs, builds and runs IT systems and process for business.</p>
                 <p>With 50 years’ experience in technology, we have grown to be one of Asia Pacific’s leading
                     locally-owned IT-based service providers. We operate across New Zealand, Australia, Malaysia and the
