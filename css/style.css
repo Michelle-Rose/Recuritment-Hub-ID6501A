@@ -72,7 +72,7 @@ ul {
     background-color: white;
     margin-top: 10px;
     margin-bottom: 10px;
-    box-shadow: 0 2px 70px 0 rgba(110, 130, 208, .18);
+    /* box-shadow: 0 2px 70px 0 rgba(110, 130, 208, .18); */
 }
 
 .pageTitle {
@@ -217,10 +217,15 @@ header .current a {
     font-weight: bold;
 }
 
-header a:hover,
-header button:hover,
-header #button:hover {
+header a:hover {
     color: #fdbb2d;
+    font-weight: bold;
+}
+
+header button:hover,
+header #button:hover,
+#navBTN:hover {
+    color: #22c1c3;
     font-weight: bold;
 }
 
@@ -236,7 +241,8 @@ header input[type=password] {
 }
 
 header button,
-#button {
+#button,
+#navBTN {
     background-color: #fdbb2d;
     border: 0;
     padding: 5px 20px;
@@ -430,7 +436,15 @@ aside #aboutSide {
     color: #22c1c3;
     border-bottom: #fdbb2d 1px solid;
 }
-
+#empSigninForm{
+    text-align: center;
+}
+#empSignInButton{
+    text-align: right;
+}
+#empSignInButton button{
+    width: 200px;
+}
 /* login overlay */
 /* profile */
 #profileSide {

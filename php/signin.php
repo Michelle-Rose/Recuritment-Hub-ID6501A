@@ -39,7 +39,7 @@
                     echo $_SESSION['userID'];
                     $_SESSION['username'] = $row[9];
                     echo $_SESSION['username'];
-                    header("Location: ../index.php?signin=sucess");
+                    header("Location: ../employer.php?signin=sucess");
                     exit();
                 } else {
                     header("Location: ../index.php?error=incorrectpasswordorusername");
