@@ -137,7 +137,7 @@
         }
 
         if (!empty($error)) {
-            echo "<script>alert('All fields must be fill in');</script>";
+           // echo "<script>alert('All fields must be fill in');</script>";
             header("Location: ../signup.php?error=emptyfields&cNme=" . $companyInput  . "fNme=" . $fNmeInput . "lNme=" . $lNmeInput . "address=" . $addressInput . "code=" . $codeInput . "sub=" . $suburbInput . "city=" . $city . "phNum=" . $phNumInput . "email=" . $emailInput);
             exit();
         } else {

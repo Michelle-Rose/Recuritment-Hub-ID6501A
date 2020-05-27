@@ -27,12 +27,28 @@ session_start();
                     <li><a href="about.php">About</a></li>
                     <li><a href="feedback.php">Feedback</a></li>
                 </ul>
-                <form action="php/signin.php" method="POST">
+                <?php
+                if (isset($_SESSION['userID'])) {
+                    echo "<form action='php/logout.php' method='POST'>
+                    <li>You are Log in</li>
+                    <button id=navBTN name='logout-submit'>Logout</button>
+                </form>";
+                } else {
+                    echo "<form action='php/signin.php' method='POST'>
+                    <input type='email' id='email-login' name='email-login' onfocus='highlight('email-login')' onblur='removeH('email-login')' placeholder='Email' />
+                    <input type='password' id='pass-login' name='pass-login' onfocus='highlight('pass-login')' onblur='removeH('pass-login')' placeholder='Password' />
+                    <button id=navBTN name='login-submit'>Login</button>
+                    <a href='signup.php' id=button>Sign Up</a>
+                    </form>";
+                }
+                ?>
+                <!-- <form action="php/signin.php" method="POST">
                     <input type="email" id="email-login" name="email-login" onfocus="highlight('email-login')" onblur="removeH('email-login')" placeholder="Email" />
                     <input type="password" id="pass-login" name="pass-login" onfocus="highlight('pass-login')" onblur="removeH('pass-login')" placeholder="Password" />
                     <button id=navBTN name="login-submit">Login</button>
                     <a href="signup.php" id=button>Sign Up</a>
-                </form>
+                </form> -->
+
             </nav>
         </div>
     </header>

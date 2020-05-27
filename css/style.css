@@ -410,7 +410,9 @@ aside #aboutSide {
     text-decoration: none;
 }
 
-
+.signupForm p {
+    color: #c8392c;
+}
 
 
 /* employer */
@@ -610,9 +612,9 @@ aside #aboutSide {
 
 
 /*Text boxes*/
-input[type=text] ,
+input[type=text],
 input[type=email],
-input[type=password]{
+input[type=password] {
     width: 90%;
     padding: 12px 20px;
     margin: 8px 0;

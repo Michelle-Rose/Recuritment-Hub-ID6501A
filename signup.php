@@ -17,6 +17,30 @@
         <div class="signup signupForm">
             <form method="POST" action="php/signupSave.php">
                 <h1>Create a Company Profile</h1>
+                <?php
+                if (isset($_GET['error'])) {
+                    if ($_GET['error'] == "emptyfields") {
+                        echo "<p>All fields must be fill in</p>";
+                    }
+                    elseif ($_GET['error'] == "invaildEmail"){
+                        echo "<p>Please provide a vaild email/p>";
+                    }
+                    elseif ($_GET['error'] == "passworddonotmatch"){
+                        echo "<p>Passwords do not match</p>";
+
+                    }
+                    elseif ($_GET['error'] == "SQLerror"){
+                        echo "<p>error with SQL</p>";
+
+                    }
+                }else if(isset($_GET['signup'])){
+                    if ($_GET['signup'] == "success"){
+                        echo "<p>sign up successfull!</p>";
+                    }
+
+                }
+
+                ?>
                 <ul>
                     <div class="formInput">
                         <input type="text" id="cNme" name="cNme" onfocus="highlight('cNme')" onblur="removeH('cNme')" placeholder="Company" />
